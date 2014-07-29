@@ -2,8 +2,8 @@
 //  BothLiveTests.m
 //  BothLiveTests
 //
-//  Created by 林峰 on 14-7-22.
-//  Copyright (c) 2014年 林峰. All rights reserved.
+//  Created by pigpigdaddy on 14-7-22.
+//  Copyright (c) 2014年 pigpigdaddy. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>

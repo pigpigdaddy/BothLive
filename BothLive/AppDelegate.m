@@ -2,8 +2,8 @@
 //  AppDelegate.m
 //  BothLive
 //
-//  Created by 林峰 on 14-7-22.
-//  Copyright (c) 2014年 林峰. All rights reserved.
+//  Created by pigpigdaddy on 14-7-22.
+//  Copyright (c) 2014年 pigpigdaddy. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -13,6 +13,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [self registerWX];
     return YES;
 }
 							
@@ -41,6 +42,33 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark
+#pragma mark ============社交分享============
+/*!
+ *  TODO:初始化微信分享工具
+ *
+ *  @author pigpigdaddy
+ */
+- (void)registerWX
+{
+    self.wxShareTool = [[WXShareTool alloc] initWithDelegate:self registerAppID:@"wx77a78db616381051" withDescription:@"Both Live"];
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    return [self.wxShareTool handleOpenURL:url];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    return [self.wxShareTool handleOpenURL:url];
+}
+
+- (void)sendToWX:(NSString *)text
+{
+    [self.wxShareTool sendLinkContent:@"活下去才是好基友" description:text thumbImage:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"dingkun" ofType:@"png"]] linkURL:@"http://www.asiabike-show.com/html/Exhibitors/Project%20team/" scene:WXSHARE_SENCE_TYPE_SESSION];
 }
 
 @end

@@ -2,14 +2,14 @@
 //  ViewController.m
 //  BothLive
 //
-//  Created by 林峰 on 14-7-22.
-//  Copyright (c) 2014年 林峰. All rights reserved.
+//  Created by pigpigdaddy on 14-7-22.
+//  Copyright (c) 2014年 pigpigdaddy. All rights reserved.
 //
 
 #import "ViewController.h"
 #import "MyScene.h"
 
-@interface ViewController()<MySceneDelegate>
+@interface ViewController()<MySceneDelegate, UIAlertViewDelegate>
 {
     
 }
@@ -116,7 +116,7 @@
 /*!
  *  TODO:撞了
  *
- *  @author 林峰
+ *  @author pigpigdaddy
  */
 - (void)crash
 {
@@ -126,15 +126,21 @@
         self.timer = nil;
     }
     // 显示选择框 分享/取消
-//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"哇塞！简直不敢相信" message:[NSString stringWithFormat:@"你竟然坚持了 %@ 秒", self.label.text] delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"分享到微信", nil];
-//    [alert show];
-    
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"哇塞！简直不敢相信" message:[NSString stringWithFormat:@"你竟然坚持了 %@ 秒", self.label.text] delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"哇塞！简直不敢相信" message:[NSString stringWithFormat:@"你竟然坚持了 %@ 秒", self.label.text] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"分享到微信", nil];
     [alert show];
 
     
     // 显示主界面
     self.welcomeView.hidden = NO;
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(sendToWX:)]) {
+            [self.delegate sendToWX:[NSString stringWithFormat:@"活下去才是好基友！你坚持了 %@ 秒", self.label.text]];
+        }
+    }
 }
 
 

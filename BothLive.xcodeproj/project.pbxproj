@@ -11,6 +11,11 @@
 		673644C7197E36BB004A4B11 /* babyJump.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 673644C4197E36BB004A4B11 /* babyJump.atlas */; };
 		673644C8197E36BB004A4B11 /* babyRun.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 673644C5197E36BB004A4B11 /* babyRun.atlas */; };
 		67364516197E3B0B004A4B11 /* 111@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67364515197E3B0B004A4B11 /* 111@2x.png */; };
+		6737BF57198774F0008DAE07 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6737BF51198774F0008DAE07 /* libWeChatSDK.a */; };
+		6737BF58198774F0008DAE07 /* WXShareTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6737BF56198774F0008DAE07 /* WXShareTool.m */; };
+		6737BF5C19877AAE008DAE07 /* Icon_58.png in Resources */ = {isa = PBXBuildFile; fileRef = 6737BF5919877AAE008DAE07 /* Icon_58.png */; };
+		6737BF5E19877AAE008DAE07 /* Icon_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 6737BF5B19877AAE008DAE07 /* Icon_120.png */; };
+		6737BF6019877B40008DAE07 /* Icon_80.png in Resources */ = {isa = PBXBuildFile; fileRef = 6737BF5F19877B40008DAE07 /* Icon_80.png */; };
 		67392416197F84AC0079776B /* shadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67392415197F84AC0079776B /* shadow@2x.png */; };
 		673A74B3197DF28400F5EE6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 673A74B2197DF28400F5EE6B /* Foundation.framework */; };
 		673A74B5197DF28400F5EE6B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 673A74B4197DF28400F5EE6B /* CoreGraphics.framework */; };
@@ -47,6 +52,14 @@
 		673644C4197E36BB004A4B11 /* babyJump.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = babyJump.atlas; sourceTree = "<group>"; };
 		673644C5197E36BB004A4B11 /* babyRun.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = babyRun.atlas; sourceTree = "<group>"; };
 		67364515197E3B0B004A4B11 /* 111@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "111@2x.png"; sourceTree = "<group>"; };
+		6737BF51198774F0008DAE07 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		6737BF52198774F0008DAE07 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		6737BF53198774F0008DAE07 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		6737BF55198774F0008DAE07 /* WXShareTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXShareTool.h; sourceTree = "<group>"; };
+		6737BF56198774F0008DAE07 /* WXShareTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXShareTool.m; sourceTree = "<group>"; };
+		6737BF5919877AAE008DAE07 /* Icon_58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_58.png; sourceTree = "<group>"; };
+		6737BF5B19877AAE008DAE07 /* Icon_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_120.png; sourceTree = "<group>"; };
+		6737BF5F19877B40008DAE07 /* Icon_80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_80.png; sourceTree = "<group>"; };
 		67392415197F84AC0079776B /* shadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shadow@2x.png"; sourceTree = "<group>"; };
 		673A74AF197DF28400F5EE6B /* BothLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BothLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		673A74B2197DF28400F5EE6B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -83,6 +96,7 @@
 				673A74B7197DF28400F5EE6B /* UIKit.framework in Frameworks */,
 				673A74B9197DF28400F5EE6B /* SpriteKit.framework in Frameworks */,
 				673A74B3197DF28400F5EE6B /* Foundation.framework in Frameworks */,
+				6737BF57198774F0008DAE07 /* libWeChatSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +113,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6737BF50198774F0008DAE07 /* WeChatSDK_1.4.2.1 */ = {
+			isa = PBXGroup;
+			children = (
+				6737BF51198774F0008DAE07 /* libWeChatSDK.a */,
+				6737BF52198774F0008DAE07 /* WXApi.h */,
+				6737BF53198774F0008DAE07 /* WXApiObject.h */,
+			);
+			path = WeChatSDK_1.4.2.1;
+			sourceTree = "<group>";
+		};
+		6737BF54198774F0008DAE07 /* WXShareTool */ = {
+			isa = PBXGroup;
+			children = (
+				6737BF55198774F0008DAE07 /* WXShareTool.h */,
+				6737BF56198774F0008DAE07 /* WXShareTool.m */,
+			);
+			path = WXShareTool;
+			sourceTree = "<group>";
+		};
 		673A74A6197DF28400F5EE6B = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +166,8 @@
 		673A74BA197DF28400F5EE6B /* BothLive */ = {
 			isa = PBXGroup;
 			children = (
+				6737BF50198774F0008DAE07 /* WeChatSDK_1.4.2.1 */,
+				6737BF54198774F0008DAE07 /* WXShareTool */,
 				6778C6C51980072600974A31 /* obstacle.atlas */,
 				673644C3197E36BB004A4B11 /* babyCrash.atlas */,
 				673644C4197E36BB004A4B11 /* babyJump.atlas */,
@@ -156,6 +191,9 @@
 		673A74BB197DF28400F5EE6B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6737BF5919877AAE008DAE07 /* Icon_58.png */,
+				6737BF5F19877B40008DAE07 /* Icon_80.png */,
+				6737BF5B19877AAE008DAE07 /* Icon_120.png */,
 				673A74BC197DF28400F5EE6B /* BothLive-Info.plist */,
 				673A74BD197DF28400F5EE6B /* InfoPlist.strings */,
 				673A74C0197DF28400F5EE6B /* main.m */,
@@ -261,11 +299,14 @@
 				673A74BF197DF28400F5EE6B /* InfoPlist.strings in Resources */,
 				673644C8197E36BB004A4B11 /* babyRun.atlas in Resources */,
 				6778C6C61980072600974A31 /* obstacle.atlas in Resources */,
+				6737BF5C19877AAE008DAE07 /* Icon_58.png in Resources */,
 				67364516197E3B0B004A4B11 /* 111@2x.png in Resources */,
 				673644C6197E36BB004A4B11 /* babyCrash.atlas in Resources */,
 				673A74D2197DF28500F5EE6B /* Images.xcassets in Resources */,
 				67428C0D197EA2020044353F /* Spaceship@2x.png in Resources */,
 				673644C7197E36BB004A4B11 /* babyJump.atlas in Resources */,
+				6737BF5E19877AAE008DAE07 /* Icon_120.png in Resources */,
+				6737BF6019877B40008DAE07 /* Icon_80.png in Resources */,
 				673A74C8197DF28400F5EE6B /* Main.storyboard in Resources */,
 				67392416197F84AC0079776B /* shadow@2x.png in Resources */,
 			);
@@ -290,6 +331,7 @@
 				673A74CB197DF28400F5EE6B /* ViewController.m in Sources */,
 				673A74C5197DF28400F5EE6B /* AppDelegate.m in Sources */,
 				673A74C1197DF28400F5EE6B /* main.m in Sources */,
+				6737BF58198774F0008DAE07 /* WXShareTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,11 +454,14 @@
 		673A74E9197DF28500F5EE6B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BothLive/BothLive-Prefix.pch";
 				INFOPLIST_FILE = "BothLive/BothLive-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BothLive/WeChatSDK_1.4.2.1",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
@@ -426,11 +471,14 @@
 		673A74EA197DF28500F5EE6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BothLive/BothLive-Prefix.pch";
 				INFOPLIST_FILE = "BothLive/BothLive-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BothLive/WeChatSDK_1.4.2.1",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;

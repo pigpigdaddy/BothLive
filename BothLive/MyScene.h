@@ -3,7 +3,7 @@
 //  BothLive
 //
 
-//  Copyright (c) 2014年 林峰. All rights reserved.
+//  Copyright (c) 2014年 pigpigdaddy. All rights reserved.
 //
 
 #import <SpriteKit/SpriteKit.h>
@@ -24,7 +24,7 @@ static const uint32_t babyCategory        =  0x1 << 1;
 /*!
  *  TODO:撞了
  *
- *  @author 林峰
+ *  @author pigpigdaddy
  */
 - (void)crash;
 
