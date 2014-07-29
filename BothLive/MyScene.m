@@ -153,14 +153,14 @@
     
     /* 跳的动画 */
     SKAction *jumpAction = [SKAction animateWithTextures:self.babyJumpFrames
-                                            timePerFrame:0.05f
+                                            timePerFrame:0.04f
                                                   resize:NO
                                                  restore:YES];
-    float duration = 1.0;
+    float duration = 0.8;
     /* 向上移动的动画 */
-    SKAction *moveUpAction = [SKAction moveTo:CGPointMake(self.downBaby.position.x, self.downBaby.position.y+BABY_JUMP_HEIGHT) duration:duration/2-0.05];
-    SKAction *holdAction = [SKAction waitForDuration:0.1];
-    SKAction *moveDownAction = [SKAction moveTo:CGPointMake(self.downBaby.position.x, self.downBaby.position.y) duration:duration/2-0.05];
+    SKAction *moveUpAction = [SKAction moveTo:CGPointMake(self.downBaby.position.x, self.downBaby.position.y+BABY_JUMP_HEIGHT) duration:duration/2-0.04];
+    SKAction *holdAction = [SKAction waitForDuration:0.08];
+    SKAction *moveDownAction = [SKAction moveTo:CGPointMake(self.downBaby.position.x, self.downBaby.position.y) duration:duration/2-0.04];
     
     [self.downBaby runAction:[SKAction group:@[jumpAction, [SKAction sequence:@[moveUpAction, holdAction, moveDownAction]]]] completion:^{
         self.isDownBabyAction = NO;
@@ -186,14 +186,14 @@
     
     /* 跳的动画 */
     SKAction *jumpAction = [SKAction animateWithTextures:self.babyJumpFrames
-                                            timePerFrame:0.05f
+                                            timePerFrame:0.04f
                                                   resize:NO
                                                  restore:YES];
-    float duration = 1.0;
+    float duration = 0.8;
     /* 向上移动的动画 */
-    SKAction *moveUpAction = [SKAction moveTo:CGPointMake(self.upBaby.position.x, self.upBaby.position.y+BABY_JUMP_HEIGHT) duration:duration/2-0.05];
-    SKAction *holdAction = [SKAction waitForDuration:0.1];
-    SKAction *moveDownAction = [SKAction moveTo:CGPointMake(self.upBaby.position.x, self.upBaby.position.y) duration:duration/2-0.05];
+    SKAction *moveUpAction = [SKAction moveTo:CGPointMake(self.upBaby.position.x, self.upBaby.position.y+BABY_JUMP_HEIGHT) duration:duration/2-0.04];
+    SKAction *holdAction = [SKAction waitForDuration:0.08];
+    SKAction *moveDownAction = [SKAction moveTo:CGPointMake(self.upBaby.position.x, self.upBaby.position.y) duration:duration/2-0.04];
     
     [self.upBaby runAction:[SKAction group:@[jumpAction, [SKAction sequence:@[moveUpAction, holdAction, moveDownAction]]]] completion:^{
         self.isUpBabyAction = NO;
@@ -278,6 +278,9 @@
 
 - (void)didBeginContact:(SKPhysicsContact *)contact
 {
+    if (self.isCrash) {
+        return;
+    }
     SKPhysicsBody *firstBody, *secondBody;
     
     if (contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask)

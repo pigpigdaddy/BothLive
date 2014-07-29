@@ -55,7 +55,8 @@
 {
     self.welcomeView.hidden = YES;
     
-    SKView * skView = (SKView *)self.view;
+    SKView * skView = [[SKView alloc] initWithFrame:self.view.bounds];
+    [self.view insertSubview:skView belowSubview:self.welcomeView];
     self.scene = nil;
     
     self.scene = [MyScene sceneWithSize:skView.bounds.size];
@@ -129,7 +130,6 @@
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"哇塞！简直不敢相信" message:[NSString stringWithFormat:@"你竟然坚持了 %@ 秒", self.label.text] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"分享到微信", nil];
     [alert show];
 
-    
     // 显示主界面
     self.welcomeView.hidden = NO;
 }

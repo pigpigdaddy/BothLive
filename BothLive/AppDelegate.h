@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "WXShareTool.h"
+#import "ViewController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, WXShareToolDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, WXShareToolDelegate, MainViewControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) WXShareTool *wxShareTool;

@@ -14,6 +14,12 @@
 {
     // Override point for customization after application launch.
     [self registerWX];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    ViewController *viewController = [[ViewController alloc] init];
+    viewController.delegate = self;
+    self.window.rootViewController = viewController;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 							
@@ -68,7 +74,7 @@
 
 - (void)sendToWX:(NSString *)text
 {
-    [self.wxShareTool sendLinkContent:@"活下去才是好基友" description:text thumbImage:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"dingkun" ofType:@"png"]] linkURL:@"http://www.asiabike-show.com/html/Exhibitors/Project%20team/" scene:WXSHARE_SENCE_TYPE_SESSION];
+    [self.wxShareTool sendLinkContent:@"活下去才是好基友" description:[NSString stringWithFormat:@"%@ 点击访问我的GitHub", text] thumbImage:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Icon_120" ofType:@"png"]] linkURL:@"https://github.com/pigpigdaddy/BothLive" scene:WXSHARE_SENCE_TYPE_TIMELINE];
 }
 
 @end
