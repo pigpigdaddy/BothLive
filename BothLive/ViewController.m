@@ -18,6 +18,7 @@
 @property (nonatomic, strong)UIView *welcomeView;
 @property (nonatomic, strong)NSTimer *timer;
 @property (nonatomic, assign)float timeCount;
+@property (nonatomic, strong)SKView *skView;
 
 @end
 
@@ -55,16 +56,15 @@
 {
     self.welcomeView.hidden = YES;
     
-    SKView * skView = [[SKView alloc] initWithFrame:self.view.bounds];
-    [self.view insertSubview:skView belowSubview:self.welcomeView];
-    self.scene = nil;
+    self.skView = [[SKView alloc] initWithFrame:self.view.bounds];
+    [self.view insertSubview:self.skView belowSubview:self.welcomeView];
     
-    self.scene = [MyScene sceneWithSize:skView.bounds.size];
+    self.scene = [MyScene sceneWithSize:self.skView.bounds.size];
     self.scene.scaleMode = SKSceneScaleModeAspectFill;
     self.scene.delegate = self;
     
     // Present the scene.
-    [skView presentScene:self.scene];
+    [self.skView presentScene:self.scene];
     
     [self showTimeCount];
     self.timeCount = 0.0;
@@ -132,6 +132,7 @@
 
     // 显示主界面
     self.welcomeView.hidden = NO;
+    [self.skView removeFromSuperview];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
