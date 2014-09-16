@@ -72,9 +72,14 @@
     return [self.wxShareTool handleOpenURL:url];
 }
 
-- (void)sendToWX:(NSString *)text
+- (void)sendToWXTimeLine:(NSString *)text
 {
-    [self.wxShareTool sendLinkContent:text description:@"源代码点击访问我的GitHub" thumbImage:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Icon_120" ofType:@"png"]] linkURL:@"https://github.com/pigpigdaddy/BothLive" scene:WXSHARE_SENCE_TYPE_TIMELINE];
+    [self.wxShareTool sendLinkContent:text description:@"狂戳此链接下载本游戏" thumbImage:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Icon_120" ofType:@"png"]] linkURL:@"https://itunes.apple.com/us/app/pao-ku-hao-ji-you/id914554369?mt=8" scene:WXSHARE_SENCE_TYPE_TIMELINE];
+}
+
+- (void)sendToWXFriend:(NSString *)text
+{
+    [self.wxShareTool sendLinkContent:text description:@"狂戳此链接下载本游戏" thumbImage:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Icon_120" ofType:@"png"]] linkURL:@"https://itunes.apple.com/us/app/pao-ku-hao-ji-you/id914554369?mt=8" scene:WXSHARE_SENCE_TYPE_SESSION];
 }
 
 @end

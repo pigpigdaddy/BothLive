@@ -11,7 +11,9 @@
 
 @protocol MainViewControllerDelegate <NSObject>
 
-- (void)sendToWX:(NSString *)text;
+- (void)sendToWXTimeLine:(NSString *)text;
+
+- (void)sendToWXFriend:(NSString *)text;
 
 @end
 

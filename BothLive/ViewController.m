@@ -127,7 +127,7 @@
         self.timer = nil;
     }
     // 显示选择框 分享/取消
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"哇塞！简直不敢相信" message:[NSString stringWithFormat:@"你竟然坚持了 %@ 秒", self.label.text] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"分享到微信", nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"哇塞！简直不敢相信" message:[NSString stringWithFormat:@"你竟然坚持了 %@ 秒", self.label.text] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"分享到微信朋友圈", @"分享给微信好友", nil];
     [alert show];
 
     // 显示主界面
@@ -137,10 +137,29 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    if (buttonIndex == 1) {
-        if (self.delegate && [self.delegate respondsToSelector:@selector(sendToWX:)]) {
-            [self.delegate sendToWX:[NSString stringWithFormat:@"跑酷好基友！你坚持了 %@ 秒", self.label.text]];
+    switch (buttonIndex) {
+        case 0:
+        {
+            
         }
+            break;
+        case 1:
+        {
+            if (self.delegate && [self.delegate respondsToSelector:@selector(sendToWXTimeLine:)]) {
+                [self.delegate sendToWXTimeLine:[NSString stringWithFormat:@"《跑酷好基友》哇塞！你坚持了 %@ 秒！！", self.label.text]];
+            }
+        }
+            break;
+        case 2:
+        {
+            if (self.delegate && [self.delegate respondsToSelector:@selector(sendToWXFriend:)]) {
+                [self.delegate sendToWXFriend:[NSString stringWithFormat:@"《跑酷好基友》哇塞！你坚持了 %@ 秒！！", self.label.text]];
+            }
+        }
+            break;
+            
+        default:
+            break;
     }
 }
 
