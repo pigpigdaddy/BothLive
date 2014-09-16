@@ -162,15 +162,16 @@
     SKAction *holdAction = [SKAction waitForDuration:0.08];
     SKAction *moveDownAction = [SKAction moveTo:CGPointMake(self.downBaby.position.x, self.downBaby.position.y) duration:duration/2-0.04];
     
+    __weak MyScene *blockSelf = self;
     [self.downBaby runAction:[SKAction group:@[jumpAction, [SKAction sequence:@[moveUpAction, holdAction, moveDownAction]]]] completion:^{
-        self.isDownBabyAction = NO;
+        blockSelf.isDownBabyAction = NO;
         
         SKAction *runAction = [SKAction repeatActionForever:
-                               [SKAction animateWithTextures:self.babyRunFrames
+                               [SKAction animateWithTextures:blockSelf.babyRunFrames
                                                 timePerFrame:0.05f
                                                       resize:NO
                                                      restore:YES]];
-        [self.downBaby runAction:runAction withKey:BABY_ACTION_RUN];
+        [blockSelf.downBaby runAction:runAction withKey:BABY_ACTION_RUN];
     }];
 }
 
@@ -195,15 +196,16 @@
     SKAction *holdAction = [SKAction waitForDuration:0.08];
     SKAction *moveDownAction = [SKAction moveTo:CGPointMake(self.upBaby.position.x, self.upBaby.position.y) duration:duration/2-0.04];
     
+    __weak MyScene *blockSelf = self;
     [self.upBaby runAction:[SKAction group:@[jumpAction, [SKAction sequence:@[moveUpAction, holdAction, moveDownAction]]]] completion:^{
-        self.isUpBabyAction = NO;
+        blockSelf.isUpBabyAction = NO;
         /* 跑的动画 */
         SKAction *runAction = [SKAction repeatActionForever:
-                               [SKAction animateWithTextures:self.babyRunFrames
+                               [SKAction animateWithTextures:blockSelf.babyRunFrames
                                                 timePerFrame:0.05f
                                                       resize:NO
                                                      restore:YES]];
-        [self.upBaby runAction:runAction withKey:BABY_ACTION_RUN];
+        [blockSelf.upBaby runAction:runAction withKey:BABY_ACTION_RUN];
     }];
 }
 
@@ -231,8 +233,10 @@
     // Create the actions
     SKAction * actionMove = [SKAction moveTo:CGPointMake(-obstacle.size.width/2, yPoint) duration:1.3];
     SKAction * actionMoveDone = [SKAction removeFromParent];
+    __weak MyScene *blockSelf = self;
     [obstacle runAction:[SKAction sequence:@[actionMove, actionMoveDone]] completion:^{
-        [self.obstacleNodes removeObject:obstacle];
+        [blockSelf.obstacleNodes removeObject:obstacle];
+        [obstacle removeFromParent];
     }];
     
     obstacle.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:obstacle.size]; // 1
