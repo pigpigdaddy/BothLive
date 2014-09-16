@@ -59,7 +59,7 @@
  */
 - (void)registerWX
 {
-    self.wxShareTool = [[WXShareTool alloc] initWithDelegate:self registerAppID:@"wx77a78db616381051" withDescription:@"Both Live"];
+    self.wxShareTool = [[WXShareTool alloc] initWithDelegate:self registerAppID:@"wxf4407a5089187214" withDescription:@"BothLive"];
 }
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
@@ -74,7 +74,7 @@
 
 - (void)sendToWX:(NSString *)text
 {
-    [self.wxShareTool sendLinkContent:@"活下去才是好基友" description:[NSString stringWithFormat:@"%@ 点击访问我的GitHub", text] thumbImage:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Icon_120" ofType:@"png"]] linkURL:@"https://github.com/pigpigdaddy/BothLive" scene:WXSHARE_SENCE_TYPE_TIMELINE];
+    [self.wxShareTool sendLinkContent:text description:@"源代码点击访问我的GitHub" thumbImage:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Icon_120" ofType:@"png"]] linkURL:@"https://github.com/pigpigdaddy/BothLive" scene:WXSHARE_SENCE_TYPE_TIMELINE];
 }
 
 @end

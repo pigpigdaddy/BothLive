@@ -139,7 +139,7 @@
 {
     if (buttonIndex == 1) {
         if (self.delegate && [self.delegate respondsToSelector:@selector(sendToWX:)]) {
-            [self.delegate sendToWX:[NSString stringWithFormat:@"活下去才是好基友！你坚持了 %@ 秒", self.label.text]];
+            [self.delegate sendToWX:[NSString stringWithFormat:@"跑酷好基友！你坚持了 %@ 秒", self.label.text]];
         }
     }
 }
