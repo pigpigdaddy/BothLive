@@ -296,7 +296,7 @@
 
     if ((firstBody.categoryBitMask & obstacleCategory) != 0 && (secondBody.categoryBitMask & babyCategory) != 0)
     {
-        [self baby:(SKSpriteNode *)secondBody.node didCollideWithObstacle:(SKSpriteNode *)firstBody.node];
+//        [self baby:(SKSpriteNode *)secondBody.node didCollideWithObstacle:(SKSpriteNode *)firstBody.node];
     }
 }
 
