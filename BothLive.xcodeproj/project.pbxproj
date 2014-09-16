@@ -446,6 +446,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BothLive/BothLive-Prefix.pch";
 				INFOPLIST_FILE = "BothLive/BothLive-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BothLive/WeChatSDK_1.4.2.1",
@@ -464,6 +465,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BothLive/BothLive-Prefix.pch";
 				INFOPLIST_FILE = "BothLive/BothLive-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BothLive/WeChatSDK_1.4.2.1",
