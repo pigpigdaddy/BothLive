@@ -102,37 +102,45 @@
 
 - (void)startTime
 {
-//    if (self.timer) {
-//        [self.timer invalidate];
-//        self.timer = nil;
-//    }
-//    self.timer = [NSTimer timerWithTimeInterval:0.01 target:self selector:@selector(addTime) userInfo:nil repeats:YES];
-//    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
-    NSLog(@"主线程 %@", [NSThread currentThread]);
-    //间隔还是2秒
-    uint64_t interval = 0.01 * NSEC_PER_SEC;
-    //创建一个专门执行timer回调的GCD队列
-    dispatch_queue_t queue = dispatch_queue_create("my queue", 0);
-    //创建Timer
-    _timers = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
-    //使用dispatch_source_set_timer函数设置timer参数
-    dispatch_source_set_timer(_timers, dispatch_time(DISPATCH_TIME_NOW, 0), interval, 0);
-    //设置回调
-    __weak ViewController *blockSelf = self;
-    dispatch_source_set_event_handler(_timers, ^()
-    {
-        NSLog(@"Timer %@", [NSThread currentThread]);
-        [blockSelf addTime];
-    });
-    //dispatch_source默认是Suspended状态，通过dispatch_resume函数开始它
-    dispatch_resume(_timers);
+    if (self.timer) {
+        [self.timer invalidate];
+        self.timer = nil;
+    }
+    self.timer = [NSTimer timerWithTimeInterval:0.01 target:self selector:@selector(addTime) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+//
+//    
+//    uint64_t interval = 0.01 * NSEC_PER_SEC;
+//    dispatch_queue_t queue = dispatch_queue_create("my queue", 0);
+//    _timers = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
+//    dispatch_source_set_timer(_timers, dispatch_time(DISPATCH_TIME_NOW, 0), interval, 0);
+//    __weak ViewController *blockSelf = self;
+//    dispatch_source_set_event_handler(_timers, ^()
+//    {
+//        [blockSelf addTime];
+//    });
+//    dispatch_resume(_timers);
+    
+    
+//    NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(newThread) object:nil];
+//    [thread start];
 }
+
+//- (void)newThread
+//{
+//    @autoreleasepool
+//    {
+//        [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(addTime) userInfo:nil repeats:YES];
+//        [[NSRunLoop currentRunLoop] run];
+//    }
+//}
 
 - (void)addTime{
     self.timeCount++;
-    dispatch_async(dispatch_get_main_queue(), ^{
-        self.label.text = [NSString stringWithFormat:@"%.2f", self.timeCount/100];
-    });
+    self.label.text = [NSString stringWithFormat:@"%.2f", self.timeCount/100];
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        self.label.text = [NSString stringWithFormat:@"%.2f", self.timeCount/100];
+//    });
 }
 
 /*!
