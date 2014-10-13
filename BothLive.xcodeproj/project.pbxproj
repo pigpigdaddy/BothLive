@@ -78,6 +78,8 @@
 		673A74E0197DF28500F5EE6B /* BothLiveTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BothLiveTests-Info.plist"; sourceTree = "<group>"; };
 		673A74E2197DF28500F5EE6B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		673A74E4197DF28500F5EE6B /* BothLiveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BothLiveTests.m; sourceTree = "<group>"; };
+		67408D2C19EBB4B7004CAC81 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		67408D2D19EBB4B7004CAC81 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		67428C0C197EA2020044353F /* Spaceship@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Spaceship@2x.png"; sourceTree = "<group>"; };
 		6778C6C51980072600974A31 /* obstacle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = obstacle.atlas; sourceTree = "<group>"; };
 		67C7D24D19C7CAB2008B65BC /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 673A74A6197DF28400F5EE6B;
 			productRefGroup = 673A74B0197DF28400F5EE6B /* Products */;
@@ -354,6 +357,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				673A74BE197DF28400F5EE6B /* en */,
+				67408D2C19EBB4B7004CAC81 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -362,6 +366,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				673A74E2197DF28500F5EE6B /* en */,
+				67408D2D19EBB4B7004CAC81 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

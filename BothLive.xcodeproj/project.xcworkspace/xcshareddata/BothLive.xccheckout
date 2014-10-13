@@ -10,29 +10,29 @@
 	<string>BothLive</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>032DC0A3-60B4-49D2-B077-FEF84E0058D4</key>
+		<key>1B40DF1912F0CFBAC4CA4C2AAFF6EC8FEE8FE429</key>
 		<string>https://github.com/pigpigdaddy/BothLive.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>BothLive.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>032DC0A3-60B4-49D2-B077-FEF84E0058D4</key>
+		<key>1B40DF1912F0CFBAC4CA4C2AAFF6EC8FEE8FE429</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/pigpigdaddy/BothLive.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>032DC0A3-60B4-49D2-B077-FEF84E0058D4</string>
+	<string>1B40DF1912F0CFBAC4CA4C2AAFF6EC8FEE8FE429</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>032DC0A3-60B4-49D2-B077-FEF84E0058D4</string>
+			<string>1B40DF1912F0CFBAC4CA4C2AAFF6EC8FEE8FE429</string>
 			<key>IDESourceControlWCCName</key>
 			<string>BothLive</string>
 		</dict>
