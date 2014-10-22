@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67283FF719F79772007C2EA1 /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 67283FF619F79772007C2EA1 /* MyScene.m */; };
 		673644C6197E36BB004A4B11 /* babyCrash.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 673644C3197E36BB004A4B11 /* babyCrash.atlas */; };
 		673644C7197E36BB004A4B11 /* babyJump.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 673644C4197E36BB004A4B11 /* babyJump.atlas */; };
 		673644C8197E36BB004A4B11 /* babyRun.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 673644C5197E36BB004A4B11 /* babyRun.atlas */; };
-		67364516197E3B0B004A4B11 /* 111@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67364515197E3B0B004A4B11 /* 111@2x.png */; };
 		6737BF58198774F0008DAE07 /* WXShareTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6737BF56198774F0008DAE07 /* WXShareTool.m */; };
 		6737BF5C19877AAE008DAE07 /* Icon_58.png in Resources */ = {isa = PBXBuildFile; fileRef = 6737BF5919877AAE008DAE07 /* Icon_58.png */; };
 		6737BF5E19877AAE008DAE07 /* Icon_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 6737BF5B19877AAE008DAE07 /* Icon_120.png */; };
@@ -24,14 +24,12 @@
 		673A74C1197DF28400F5EE6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 673A74C0197DF28400F5EE6B /* main.m */; };
 		673A74C5197DF28400F5EE6B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 673A74C4197DF28400F5EE6B /* AppDelegate.m */; };
 		673A74CB197DF28400F5EE6B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 673A74CA197DF28400F5EE6B /* ViewController.m */; };
-		673A74CE197DF28400F5EE6B /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 673A74CD197DF28400F5EE6B /* MyScene.m */; };
 		673A74D2197DF28500F5EE6B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 673A74D1197DF28500F5EE6B /* Images.xcassets */; };
 		673A74D9197DF28500F5EE6B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 673A74D8197DF28500F5EE6B /* XCTest.framework */; };
 		673A74DA197DF28500F5EE6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 673A74B2197DF28400F5EE6B /* Foundation.framework */; };
 		673A74DB197DF28500F5EE6B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 673A74B6197DF28400F5EE6B /* UIKit.framework */; };
 		673A74E3197DF28500F5EE6B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 673A74E1197DF28500F5EE6B /* InfoPlist.strings */; };
 		673A74E5197DF28500F5EE6B /* BothLiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 673A74E4197DF28500F5EE6B /* BothLiveTests.m */; };
-		67428C0D197EA2020044353F /* Spaceship@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67428C0C197EA2020044353F /* Spaceship@2x.png */; };
 		6778C6C61980072600974A31 /* obstacle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 6778C6C51980072600974A31 /* obstacle.atlas */; };
 		67C7D25019C7CAB2008B65BC /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C7D24D19C7CAB2008B65BC /* libWeChatSDK.a */; };
 /* End PBXBuildFile section */
@@ -47,10 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		67283FF519F79772007C2EA1 /* MyScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
+		67283FF619F79772007C2EA1 /* MyScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
 		673644C3197E36BB004A4B11 /* babyCrash.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = babyCrash.atlas; sourceTree = "<group>"; };
 		673644C4197E36BB004A4B11 /* babyJump.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = babyJump.atlas; sourceTree = "<group>"; };
 		673644C5197E36BB004A4B11 /* babyRun.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = babyRun.atlas; sourceTree = "<group>"; };
-		67364515197E3B0B004A4B11 /* 111@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "111@2x.png"; sourceTree = "<group>"; };
 		6737BF55198774F0008DAE07 /* WXShareTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXShareTool.h; sourceTree = "<group>"; };
 		6737BF56198774F0008DAE07 /* WXShareTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXShareTool.m; sourceTree = "<group>"; };
 		6737BF5919877AAE008DAE07 /* Icon_58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_58.png; sourceTree = "<group>"; };
@@ -70,8 +69,6 @@
 		673A74C4197DF28400F5EE6B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		673A74C9197DF28400F5EE6B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		673A74CA197DF28400F5EE6B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		673A74CC197DF28400F5EE6B /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
-		673A74CD197DF28400F5EE6B /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
 		673A74D1197DF28500F5EE6B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		673A74D7197DF28500F5EE6B /* BothLiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BothLiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		673A74D8197DF28500F5EE6B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -80,7 +77,6 @@
 		673A74E4197DF28500F5EE6B /* BothLiveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BothLiveTests.m; sourceTree = "<group>"; };
 		67408D2C19EBB4B7004CAC81 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		67408D2D19EBB4B7004CAC81 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		67428C0C197EA2020044353F /* Spaceship@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Spaceship@2x.png"; sourceTree = "<group>"; };
 		6778C6C51980072600974A31 /* obstacle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = obstacle.atlas; sourceTree = "<group>"; };
 		67C7D24D19C7CAB2008B65BC /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		67C7D24E19C7CAB2008B65BC /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
@@ -113,6 +109,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		67283FF419F79744007C2EA1 /* BothLiveSourceCode */ = {
+			isa = PBXGroup;
+			children = (
+				67283FF519F79772007C2EA1 /* MyScene.h */,
+				67283FF619F79772007C2EA1 /* MyScene.m */,
+			);
+			path = BothLiveSourceCode;
+			sourceTree = "<group>";
+		};
 		6737BF54198774F0008DAE07 /* WXShareTool */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,10 +171,7 @@
 				673A74C4197DF28400F5EE6B /* AppDelegate.m */,
 				673A74C9197DF28400F5EE6B /* ViewController.h */,
 				673A74CA197DF28400F5EE6B /* ViewController.m */,
-				673A74CC197DF28400F5EE6B /* MyScene.h */,
-				673A74CD197DF28400F5EE6B /* MyScene.m */,
-				67364515197E3B0B004A4B11 /* 111@2x.png */,
-				67428C0C197EA2020044353F /* Spaceship@2x.png */,
+				67283FF419F79744007C2EA1 /* BothLiveSourceCode */,
 				67392415197F84AC0079776B /* shadow@2x.png */,
 				673A74D1197DF28500F5EE6B /* Images.xcassets */,
 				673A74BB197DF28400F5EE6B /* Supporting Files */,
@@ -300,10 +302,8 @@
 				673644C8197E36BB004A4B11 /* babyRun.atlas in Resources */,
 				6778C6C61980072600974A31 /* obstacle.atlas in Resources */,
 				6737BF5C19877AAE008DAE07 /* Icon_58.png in Resources */,
-				67364516197E3B0B004A4B11 /* 111@2x.png in Resources */,
 				673644C6197E36BB004A4B11 /* babyCrash.atlas in Resources */,
 				673A74D2197DF28500F5EE6B /* Images.xcassets in Resources */,
-				67428C0D197EA2020044353F /* Spaceship@2x.png in Resources */,
 				673644C7197E36BB004A4B11 /* babyJump.atlas in Resources */,
 				6737BF5E19877AAE008DAE07 /* Icon_120.png in Resources */,
 				6737BF6019877B40008DAE07 /* Icon_80.png in Resources */,
@@ -326,8 +326,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				673A74CE197DF28400F5EE6B /* MyScene.m in Sources */,
 				673A74CB197DF28400F5EE6B /* ViewController.m in Sources */,
+				67283FF719F79772007C2EA1 /* MyScene.m in Sources */,
 				673A74C5197DF28400F5EE6B /* AppDelegate.m in Sources */,
 				673A74C1197DF28400F5EE6B /* main.m in Sources */,
 				6737BF58198774F0008DAE07 /* WXShareTool.m in Sources */,

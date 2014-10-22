@@ -14,7 +14,7 @@
 		<string>https://github.com/pigpigdaddy/BothLive.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>BothLive.xcodeproj/project.xcworkspace</string>
+	<string>BothLive.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>1B40DF1912F0CFBAC4CA4C2AAFF6EC8FEE8FE429</key>

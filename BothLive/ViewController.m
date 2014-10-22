@@ -10,9 +10,6 @@
 #import "MyScene.h"
 
 @interface ViewController()<MySceneDelegate, UIAlertViewDelegate>
-{
-    dispatch_source_t _timers;
-}
 
 @property (nonatomic, strong)MyScene *scene;
 @property (nonatomic, strong)UIView *welcomeView;
