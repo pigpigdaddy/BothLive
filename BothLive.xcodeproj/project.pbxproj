@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		67283FF719F79772007C2EA1 /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 67283FF619F79772007C2EA1 /* MyScene.m */; };
+		67283FFD19F79976007C2EA1 /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 67283FFB19F79976007C2EA1 /* MyScene.m */; };
 		673644C6197E36BB004A4B11 /* babyCrash.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 673644C3197E36BB004A4B11 /* babyCrash.atlas */; };
 		673644C7197E36BB004A4B11 /* babyJump.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 673644C4197E36BB004A4B11 /* babyJump.atlas */; };
 		673644C8197E36BB004A4B11 /* babyRun.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 673644C5197E36BB004A4B11 /* babyRun.atlas */; };
@@ -45,8 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		67283FF519F79772007C2EA1 /* MyScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
-		67283FF619F79772007C2EA1 /* MyScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
+		67283FFA19F79976007C2EA1 /* MyScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
+		67283FFB19F79976007C2EA1 /* MyScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
 		673644C3197E36BB004A4B11 /* babyCrash.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = babyCrash.atlas; sourceTree = "<group>"; };
 		673644C4197E36BB004A4B11 /* babyJump.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = babyJump.atlas; sourceTree = "<group>"; };
 		673644C5197E36BB004A4B11 /* babyRun.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = babyRun.atlas; sourceTree = "<group>"; };
@@ -112,10 +112,34 @@
 		67283FF419F79744007C2EA1 /* BothLiveSourceCode */ = {
 			isa = PBXGroup;
 			children = (
-				67283FF519F79772007C2EA1 /* MyScene.h */,
-				67283FF619F79772007C2EA1 /* MyScene.m */,
+				67283FF819F79976007C2EA1 /* GameSceneController */,
+				67283FFC19F79976007C2EA1 /* MenuViewController */,
 			);
 			path = BothLiveSourceCode;
+			sourceTree = "<group>";
+		};
+		67283FF819F79976007C2EA1 /* GameSceneController */ = {
+			isa = PBXGroup;
+			children = (
+				67283FF919F79976007C2EA1 /* Scene */,
+			);
+			path = GameSceneController;
+			sourceTree = "<group>";
+		};
+		67283FF919F79976007C2EA1 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				67283FFA19F79976007C2EA1 /* MyScene.h */,
+				67283FFB19F79976007C2EA1 /* MyScene.m */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		67283FFC19F79976007C2EA1 /* MenuViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MenuViewController;
 			sourceTree = "<group>";
 		};
 		6737BF54198774F0008DAE07 /* WXShareTool */ = {
@@ -327,7 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				673A74CB197DF28400F5EE6B /* ViewController.m in Sources */,
-				67283FF719F79772007C2EA1 /* MyScene.m in Sources */,
+				67283FFD19F79976007C2EA1 /* MyScene.m in Sources */,
 				673A74C5197DF28400F5EE6B /* AppDelegate.m in Sources */,
 				673A74C1197DF28400F5EE6B /* main.m in Sources */,
 				6737BF58198774F0008DAE07 /* WXShareTool.m in Sources */,
