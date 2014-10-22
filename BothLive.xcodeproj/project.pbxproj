@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		67283FFD19F79976007C2EA1 /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 67283FFB19F79976007C2EA1 /* MyScene.m */; };
+		6728400119F79A61007C2EA1 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6728400019F79A61007C2EA1 /* MenuViewController.m */; };
+		6728400419F79B85007C2EA1 /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6728400319F79B85007C2EA1 /* MenuView.m */; };
+		6728400719F79B9A007C2EA1 /* RankListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6728400619F79B9A007C2EA1 /* RankListView.m */; };
 		673644C6197E36BB004A4B11 /* babyCrash.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 673644C3197E36BB004A4B11 /* babyCrash.atlas */; };
 		673644C7197E36BB004A4B11 /* babyJump.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 673644C4197E36BB004A4B11 /* babyJump.atlas */; };
 		673644C8197E36BB004A4B11 /* babyRun.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 673644C5197E36BB004A4B11 /* babyRun.atlas */; };
@@ -47,6 +50,12 @@
 /* Begin PBXFileReference section */
 		67283FFA19F79976007C2EA1 /* MyScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
 		67283FFB19F79976007C2EA1 /* MyScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
+		67283FFF19F79A61007C2EA1 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		6728400019F79A61007C2EA1 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		6728400219F79B85007C2EA1 /* MenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuView.h; sourceTree = "<group>"; };
+		6728400319F79B85007C2EA1 /* MenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuView.m; sourceTree = "<group>"; };
+		6728400519F79B9A007C2EA1 /* RankListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankListView.h; sourceTree = "<group>"; };
+		6728400619F79B9A007C2EA1 /* RankListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankListView.m; sourceTree = "<group>"; };
 		673644C3197E36BB004A4B11 /* babyCrash.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = babyCrash.atlas; sourceTree = "<group>"; };
 		673644C4197E36BB004A4B11 /* babyJump.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = babyJump.atlas; sourceTree = "<group>"; };
 		673644C5197E36BB004A4B11 /* babyRun.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = babyRun.atlas; sourceTree = "<group>"; };
@@ -138,8 +147,22 @@
 		67283FFC19F79976007C2EA1 /* MenuViewController */ = {
 			isa = PBXGroup;
 			children = (
+				67283FFF19F79A61007C2EA1 /* MenuViewController.h */,
+				6728400019F79A61007C2EA1 /* MenuViewController.m */,
+				67283FFE19F799F1007C2EA1 /* MenuView */,
 			);
 			path = MenuViewController;
+			sourceTree = "<group>";
+		};
+		67283FFE19F799F1007C2EA1 /* MenuView */ = {
+			isa = PBXGroup;
+			children = (
+				6728400219F79B85007C2EA1 /* MenuView.h */,
+				6728400319F79B85007C2EA1 /* MenuView.m */,
+				6728400519F79B9A007C2EA1 /* RankListView.h */,
+				6728400619F79B9A007C2EA1 /* RankListView.m */,
+			);
+			path = MenuView;
 			sourceTree = "<group>";
 		};
 		6737BF54198774F0008DAE07 /* WXShareTool */ = {
@@ -351,10 +374,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				673A74CB197DF28400F5EE6B /* ViewController.m in Sources */,
+				6728400119F79A61007C2EA1 /* MenuViewController.m in Sources */,
 				67283FFD19F79976007C2EA1 /* MyScene.m in Sources */,
 				673A74C5197DF28400F5EE6B /* AppDelegate.m in Sources */,
+				6728400719F79B9A007C2EA1 /* RankListView.m in Sources */,
 				673A74C1197DF28400F5EE6B /* main.m in Sources */,
 				6737BF58198774F0008DAE07 /* WXShareTool.m in Sources */,
+				6728400419F79B85007C2EA1 /* MenuView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

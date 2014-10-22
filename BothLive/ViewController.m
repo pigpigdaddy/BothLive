@@ -24,9 +24,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-//    skView.showsFPS = YES;
-//    skView.showsNodeCount = YES;
     [self showWelcomeView];
 }
 
