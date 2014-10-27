@@ -13,4 +13,12 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+
+typedef enum{
+    MENU_LIST_BUTTON_NAME_START = 1,
+    MENU_LIST_BUTTON_NAME_BACK_TO_TOP,
+    MENU_LIST_BUTTON_NAME_GAME_NORMAL,
+    MENU_LIST_BUTTON_NAME_RANK_LIST
+}MENU_LIST_BUTTON_NAME;
+
 #endif

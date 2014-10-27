@@ -7,15 +7,85 @@
 //
 
 #import "MenuView.h"
+#import "MenuListView.h"
+
+@interface MenuView()<MenuListViewDelegate>
+
+@property (nonatomic, strong) NSArray *menuListData;
+@property (nonatomic, strong) MenuListView *menuListView;
+
+@end
 
 @implementation MenuView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+/*!
+ *  @Author pigpigdaddy, 14-10-27 15:10:15
+ *
+ *  @brief  初始化
+ *
+ *  @param frame
+ *  @param delegate
+ *  @param array    菜单数据
+ *
+ *  @return
+ */
+- (instancetype)initWithFrame:(CGRect)frame withDelegate:(id<MenuViewDelegate>)delegate menuData:(NSArray *)array
+{
+    self = [super init];
+    if (self) {
+        //
+        self.delegate = delegate;
+        [self initData:array];
+        [self initView];
+    }
+    return self;
 }
-*/
+
+- (void)initData:(NSArray *)data
+{
+    self.menuListData = data;
+}
+
+- (void)initView
+{
+    [self initBgView];
+    [self initListView];
+}
+
+- (void)initBgView
+{
+    
+}
+
+- (void)initListView
+{
+    self.menuListView = [[MenuListView alloc] initWithFrame:CGRectMake(0, 2*self.bounds.size.height/3, self.bounds.size.width, self.bounds.size.height/3) withDelegate:self withData:self.menuListData];
+    [self addSubview:self.menuListView];
+}
+
+#pragma mark
+#pragma mark ============ MenuListViewDelegate ============
+/*!
+ *  @Author pigpigdaddy, 14-10-27 15:10:54
+ *
+ *  @brief  列表点击了某个按钮
+ *
+ *  @param menuIndex 按钮index
+ */
+- (void)buttonSelectAtIndex:(MENU_LIST_BUTTON_NAME)menuIndex
+{
+    switch (menuIndex) {
+        case MENU_LIST_BUTTON_NAME_GAME_NORMAL:
+        {
+            if (self.delegate && [self.delegate respondsToSelector:@selector(beginGame:)]) {
+                [self.delegate beginGame:MENU_LIST_BUTTON_NAME_GAME_NORMAL];
+            }
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
 
 @end
