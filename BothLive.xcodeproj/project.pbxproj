@@ -33,6 +33,7 @@
 		673A74DB197DF28500F5EE6B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 673A74B6197DF28400F5EE6B /* UIKit.framework */; };
 		673A74E3197DF28500F5EE6B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 673A74E1197DF28500F5EE6B /* InfoPlist.strings */; };
 		673A74E5197DF28500F5EE6B /* BothLiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 673A74E4197DF28500F5EE6B /* BothLiveTests.m */; };
+		675C589219F8AECE005FA44A /* GameSceneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 675C589119F8AECE005FA44A /* GameSceneViewController.m */; };
 		6778C6C61980072600974A31 /* obstacle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 6778C6C51980072600974A31 /* obstacle.atlas */; };
 		67C7D25019C7CAB2008B65BC /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C7D24D19C7CAB2008B65BC /* libWeChatSDK.a */; };
 /* End PBXBuildFile section */
@@ -86,6 +87,8 @@
 		673A74E4197DF28500F5EE6B /* BothLiveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BothLiveTests.m; sourceTree = "<group>"; };
 		67408D2C19EBB4B7004CAC81 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		67408D2D19EBB4B7004CAC81 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		675C589019F8AECE005FA44A /* GameSceneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSceneViewController.h; sourceTree = "<group>"; };
+		675C589119F8AECE005FA44A /* GameSceneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSceneViewController.m; sourceTree = "<group>"; };
 		6778C6C51980072600974A31 /* obstacle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = obstacle.atlas; sourceTree = "<group>"; };
 		67C7D24D19C7CAB2008B65BC /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		67C7D24E19C7CAB2008B65BC /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
@@ -130,6 +133,8 @@
 		67283FF819F79976007C2EA1 /* GameSceneController */ = {
 			isa = PBXGroup;
 			children = (
+				675C589019F8AECE005FA44A /* GameSceneViewController.h */,
+				675C589119F8AECE005FA44A /* GameSceneViewController.m */,
 				67283FF919F79976007C2EA1 /* Scene */,
 			);
 			path = GameSceneController;
@@ -378,6 +383,7 @@
 				67283FFD19F79976007C2EA1 /* MyScene.m in Sources */,
 				673A74C5197DF28400F5EE6B /* AppDelegate.m in Sources */,
 				6728400719F79B9A007C2EA1 /* RankListView.m in Sources */,
+				675C589219F8AECE005FA44A /* GameSceneViewController.m in Sources */,
 				673A74C1197DF28400F5EE6B /* main.m in Sources */,
 				6737BF58198774F0008DAE07 /* WXShareTool.m in Sources */,
 				6728400419F79B85007C2EA1 /* MenuView.m in Sources */,
