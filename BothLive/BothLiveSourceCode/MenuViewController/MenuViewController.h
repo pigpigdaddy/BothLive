@@ -13,7 +13,10 @@
  */
 
 #import <UIKit/UIKit.h>
+#import "MenuView.h"
 
 @interface MenuViewController : UIViewController
+
+@property (nonatomic, strong)MenuView *menuView;
 
 @end

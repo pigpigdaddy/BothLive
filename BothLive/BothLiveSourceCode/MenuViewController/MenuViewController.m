@@ -10,6 +10,8 @@
 
 @interface MenuViewController ()
 
+@property (nonatomic, strong)NSArray *listDataArray;
+
 @end
 
 @implementation MenuViewController
@@ -17,6 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self initData];
+    [self initView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +29,19 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)initData
+{
+    [self initMenuListData];
 }
-*/
+
+- (void)initView
+{
+    
+}
+
+- (void)initMenuListData
+{
+    self.listDataArray = [NSArray arrayWithObjects:[NSDictionary dictionaryWithObjectsAndKeys:[NSArray arrayWithObjects:[NSString stringWithFormat:@"%d", MENU_LIST_BUTTON_NAME_GAME_NORMAL], nil], [NSString stringWithFormat:@"%d", MENU_LIST_BUTTON_NAME_START], nil], [NSDictionary dictionaryWithObjectsAndKeys:[NSArray array], [NSString stringWithFormat:@"%d", MENU_LIST_BUTTON_NAME_RANK_LIST], nil], nil];
+}
 
 @end
