@@ -13,6 +13,7 @@
  */
 
 #import <UIKit/UIKit.h>
+#import "MenuAnimationView.h"
 
 @protocol MenuViewDelegate <NSObject>
 
@@ -30,6 +31,7 @@
 @interface MenuView : UIView
 
 @property (nonatomic, assign) id<MenuViewDelegate> delegate;
+@property (nonatomic, strong) MenuAnimationView *menuAnimationView;
 
 /*!
  *  @Author pigpigdaddy, 14-10-27 15:10:15

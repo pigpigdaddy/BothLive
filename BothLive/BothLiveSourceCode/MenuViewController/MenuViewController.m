@@ -8,7 +8,7 @@
 
 #import "MenuViewController.h"
 
-@interface MenuViewController ()
+@interface MenuViewController ()<MenuViewDelegate>
 
 @property (nonatomic, strong)NSArray *listDataArray;
 
@@ -36,7 +36,8 @@
 
 - (void)initView
 {
-    
+    self.menuView = [[MenuView alloc] initWithFrame:self.view.bounds withDelegate:self menuData:self.listDataArray];
+    [self.view addSubview:self.menuView];
 }
 
 - (void)initMenuListData

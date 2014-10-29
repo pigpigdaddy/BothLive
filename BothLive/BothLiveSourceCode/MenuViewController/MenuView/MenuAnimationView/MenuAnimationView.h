@@ -10,4 +10,18 @@
 
 @interface MenuAnimationView : UIView
 
+/*!
+ *  @Author pigpigdaddy, 14-10-29 22:10:27
+ *
+ *  @brief  开始动画
+ */
+- (void)startAnimation;
+
+/*!
+ *  @Author pigpigdaddy, 14-10-29 22:10:02
+ *
+ *  @brief  停止动画
+ */
+- (void)stopAnimation;
+
 @end

@@ -15,8 +15,15 @@
 #import <UIKit/UIKit.h>
 #import "MenuView.h"
 
+@protocol MenuViewControllerDelegate <NSObject>
+
+//
+
+@end
+
 @interface MenuViewController : UIViewController
 
 @property (nonatomic, strong)MenuView *menuView;
+@property (nonatomic, assign)id<MenuViewControllerDelegate>delegate;
 
 @end

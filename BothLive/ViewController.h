@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <SpriteKit/SpriteKit.h>
 
 @protocol MainViewControllerDelegate <NSObject>
 
@@ -19,7 +18,6 @@
 
 @interface ViewController : UIViewController
 
-@property (nonatomic, strong)UILabel *label;
 @property (nonatomic, weak)id<MainViewControllerDelegate> delegate;
 
 @end

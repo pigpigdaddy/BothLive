@@ -31,7 +31,7 @@
  */
 - (instancetype)initWithFrame:(CGRect)frame withDelegate:(id<MenuViewDelegate>)delegate menuData:(NSArray *)array
 {
-    self = [super init];
+    self = [super initWithFrame:frame];
     if (self) {
         //
         self.delegate = delegate;
@@ -54,7 +54,8 @@
 
 - (void)initBgView
 {
-    
+    self.menuAnimationView = [[MenuAnimationView alloc] initWithFrame:self.bounds];
+    [self addSubview:self.menuAnimationView];
 }
 
 - (void)initListView
