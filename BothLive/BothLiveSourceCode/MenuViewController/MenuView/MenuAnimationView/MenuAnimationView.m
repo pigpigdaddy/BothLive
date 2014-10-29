@@ -45,6 +45,12 @@
     imageViewSky.frame = self.bounds;
     [self addSubview:imageViewSky];
     
+    UIImage *imageLight = [UIImage imageNamed:@"menu_animationView_light.png"];
+    self.imageViewLight = [[UIImageView alloc] initWithImage:imageLight];
+    self.imageViewLight.frame = CGRectMake(0, 0, imageLight.size.width, imageLight.size.height);
+    self.imageViewLight.center = CGPointMake(self.bounds.size.width/2, self.bounds.size.height/2+30);
+    [self addSubview:self.imageViewLight];
+    
     UIImage *imageGround = [UIImage imageNamed:@"menu_animationView_ground.png"];
     UIImageView *imageViewGround = [[UIImageView alloc] initWithImage:imageGround];
     imageViewGround.frame = self.bounds;
