@@ -43,7 +43,7 @@
 
 - (void)initMenuListData
 {
-    self.listDataArray = [NSArray arrayWithObjects:[NSDictionary dictionaryWithObjectsAndKeys:[NSArray arrayWithObjects:[NSString stringWithFormat:@"%d", MENU_LIST_BUTTON_NAME_GAME_NORMAL], nil], [NSString stringWithFormat:@"%d", MENU_LIST_BUTTON_NAME_START], nil], [NSDictionary dictionaryWithObjectsAndKeys:[NSArray array], [NSString stringWithFormat:@"%d", MENU_LIST_BUTTON_NAME_RANK_LIST], nil], nil];
+    self.listDataArray = [NSArray arrayWithObjects:[NSDictionary dictionaryWithObjectsAndKeys:[NSArray array], [NSString stringWithFormat:@"%d", MENU_LIST_BUTTON_NAME_START], nil], [NSDictionary dictionaryWithObjectsAndKeys:[NSArray array], [NSString stringWithFormat:@"%d", MENU_LIST_BUTTON_NAME_RANK_LIST], nil], nil];
 }
 
 #pragma mark

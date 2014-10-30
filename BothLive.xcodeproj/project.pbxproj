@@ -80,6 +80,8 @@
 		67C308511A01215600E06E49 /* menu_animationView_ufo_hi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67C308461A01215600E06E49 /* menu_animationView_ufo_hi@2x.png */; };
 		67C308551A0121B800E06E49 /* MenuAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C308541A0121B800E06E49 /* MenuAnimationView.m */; };
 		67C7D25019C7CAB2008B65BC /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C7D24D19C7CAB2008B65BC /* libWeChatSDK.a */; };
+		67EE05071A026D7E00978A0E /* menu_view_list_btn_start@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67EE05051A026D7E00978A0E /* menu_view_list_btn_start@2x.png */; };
+		67EE05081A026D7E00978A0E /* menu_view_list_btn_top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67EE05061A026D7E00978A0E /* menu_view_list_btn_top@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -194,6 +196,8 @@
 		67C7D24D19C7CAB2008B65BC /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		67C7D24E19C7CAB2008B65BC /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		67C7D24F19C7CAB2008B65BC /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		67EE05051A026D7E00978A0E /* menu_view_list_btn_start@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_view_list_btn_start@2x.png"; sourceTree = "<group>"; };
+		67EE05061A026D7E00978A0E /* menu_view_list_btn_top@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_view_list_btn_top@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -472,6 +476,8 @@
 				67C308441A01215600E06E49 /* menu_animationView_sky@2x.png */,
 				67C308451A01215600E06E49 /* menu_animationView_ufo@2x.png */,
 				67C308461A01215600E06E49 /* menu_animationView_ufo_hi@2x.png */,
+				67EE05051A026D7E00978A0E /* menu_view_list_btn_start@2x.png */,
+				67EE05061A026D7E00978A0E /* menu_view_list_btn_top@2x.png */,
 			);
 			path = MenuViewImage;
 			sourceTree = "<group>";
@@ -588,6 +594,7 @@
 				67C3084C1A01215600E06E49 /* menu_animationView_letter_pao@2x.png in Resources */,
 				6738D4391A01DAF100419110 /* run9@2x.png in Resources */,
 				6738D4271A01DAF100419110 /* run11@2x.png in Resources */,
+				67EE05071A026D7E00978A0E /* menu_view_list_btn_start@2x.png in Resources */,
 				6737BF5C19877AAE008DAE07 /* Icon_58.png in Resources */,
 				673644C6197E36BB004A4B11 /* babyCrash.atlas in Resources */,
 				6738D4301A01DAF100419110 /* run1@2x.png in Resources */,
@@ -604,6 +611,7 @@
 				678142AE19FE11F9002B0580 /* MenuListViewCell.xib in Resources */,
 				6738D4311A01DAF100419110 /* run20@2x.png in Resources */,
 				67C308491A01215600E06E49 /* menu_animationView_ground@2x.png in Resources */,
+				67EE05081A026D7E00978A0E /* menu_view_list_btn_top@2x.png in Resources */,
 				6737BF5E19877AAE008DAE07 /* Icon_120.png in Resources */,
 				6737BF6019877B40008DAE07 /* Icon_80.png in Resources */,
 				67C3084D1A01215600E06E49 /* menu_animationView_light@2x.png in Resources */,

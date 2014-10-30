@@ -60,7 +60,7 @@
 
 - (void)initListView
 {
-    self.menuListView = [[MenuListView alloc] initWithFrame:CGRectMake(0, 2*self.bounds.size.height/3, self.bounds.size.width, self.bounds.size.height/3) withDelegate:self withData:self.menuListData];
+    self.menuListView = [[MenuListView alloc] initWithFrame:CGRectMake(0, self.center.y+70, self.frame.size.width, self.frame.size.height/3) withDelegate:self withData:self.menuListData];
     [self addSubview:self.menuListView];
 }
 

@@ -32,7 +32,7 @@
  */
 - (instancetype)initWithFrame:(CGRect)frame withDelegate:(id<MenuListViewDelegate>)delegate withData:(NSArray *)data
 {
-    self = [super init];
+    self = [super initWithFrame:frame];
     if (self) {
         //
         [self initData:data];
@@ -48,7 +48,6 @@
     for (NSDictionary *dict in self.data) {
         [self.currentListArray addObject:[[dict allKeys] firstObject]];
     }
-    [self.currentListArray addObject:[NSString stringWithFormat:@"%d", MENU_LIST_BUTTON_NAME_RANK_LIST]];
 }
 
 - (void)initView
@@ -61,6 +60,10 @@
     self.tableView = [[UITableView alloc] initWithFrame:self.bounds];
     self.tableView.backgroundColor = [UIColor clearColor];
     [self.tableView registerNib:[UINib nibWithNibName:@"MenuListViewCell" bundle:nil] forCellReuseIdentifier:@"MenuListViewCell"];
+    self.tableView.scrollEnabled = NO;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
     [self addSubview:self.tableView];
 }
 
@@ -75,7 +78,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MenuListViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MenuListViewCell" forIndexPath:indexPath];
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.delegate = self;
     [cell loadData:[[self.currentListArray objectAtIndex:indexPath.row] intValue]];
     
@@ -97,13 +100,16 @@
         case MENU_LIST_BUTTON_NAME_START:
         {
             // 点击了“开始” 进入下一级菜单
-            [self.currentListArray removeAllObjects];
-            NSDictionary *dict = [self.data firstObject];
-            NSArray *array = [[dict allValues] firstObject];
-            [self.currentListArray addObjectsFromArray:array];
-            [self.currentListArray addObject:[NSString stringWithFormat:@"%d", MENU_LIST_BUTTON_NAME_BACK_TO_TOP]];
-            
-            [self.tableView reloadData];
+//            [self.currentListArray removeAllObjects];
+//            NSDictionary *dict = [self.data firstObject];
+//            NSArray *array = [[dict allValues] firstObject];
+//            [self.currentListArray addObjectsFromArray:array];
+//            [self.currentListArray addObject:[NSString stringWithFormat:@"%d", MENU_LIST_BUTTON_NAME_BACK_TO_TOP]];
+//            
+//            [self.tableView reloadData];
+            if (self.delegate && [self.delegate respondsToSelector:@selector(buttonSelectAtIndex:)]) {
+                [self.delegate buttonSelectAtIndex:MENU_LIST_BUTTON_NAME_GAME_NORMAL];
+            }
         }
             break;
         case MENU_LIST_BUTTON_NAME_BACK_TO_TOP:

@@ -35,7 +35,7 @@
     switch (self.index) {
         case MENU_LIST_BUTTON_NAME_START:
         {
-            image = [UIImage imageNamed:@""];
+            image = [UIImage imageNamed:@"menu_view_list_btn_start.png"];
         }
             break;
         case MENU_LIST_BUTTON_NAME_BACK_TO_TOP:
@@ -46,6 +46,11 @@
         case MENU_LIST_BUTTON_NAME_GAME_NORMAL:
         {
             image = [UIImage imageNamed:@""];
+        }
+            break;
+        case MENU_LIST_BUTTON_NAME_RANK_LIST:
+        {
+            image = [UIImage imageNamed:@"menu_view_list_btn_top.png"];
         }
             break;
             

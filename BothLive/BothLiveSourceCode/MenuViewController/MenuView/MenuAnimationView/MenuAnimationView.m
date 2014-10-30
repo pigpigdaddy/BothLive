@@ -67,6 +67,7 @@
     self.imageViewReflect = [[UIImageView alloc] initWithImage:image];
     self.imageViewReflect.frame = CGRectMake(self.center.x-160, self.center.y+25, image.size.width+4, image.size.height);
     [self addSubview:self.imageViewReflect];
+    self.imageViewReflect.alpha = 0.0;
 }
 
 /*!
@@ -78,18 +79,19 @@
 {
     UIImage *imagePao = [UIImage imageNamed:@"menu_animationView_letter_pao.png"];
     self.imageViewChiNameBig = [[UIImageView alloc] initWithImage:imagePao];
-    self.imageViewChiNameBig.frame = CGRectMake(self.center.x-130, self.center.y-49, imagePao.size.width, imagePao.size.height);
+    self.imageViewChiNameBig.frame = CGRectMake(self.center.x-130, self.center.y-49+imagePao.size.height, imagePao.size.width, 1);
     [self addSubview:self.imageViewChiNameBig];
     
     UIImage *imageSmallName = [UIImage imageNamed:@"menu_animationView_letter_khjy.png"];
     self.imageViewChiNameSmall = [[UIImageView alloc] initWithImage:imageSmallName];
-    self.imageViewChiNameSmall.frame = CGRectMake(self.center.x-43, self.center.y-9, imageSmallName.size.width, imageSmallName.size.height);
+    self.imageViewChiNameSmall.frame = CGRectMake(self.center.x-43, self.center.y-9+imageSmallName.size.height, imageSmallName.size.width, 1);
     [self addSubview:self.imageViewChiNameSmall];
     
     UIImage *imageEngName = [UIImage imageNamed:@"menu_animationView_letter_eng.png"];
     self.imageViewEngName = [[UIImageView alloc] initWithImage:imageEngName];
     self.imageViewEngName.frame = CGRectMake(self.center.x+35, self.center.y-29, imageEngName.size.width, imageEngName.size.height);
     [self addSubview:self.imageViewEngName];
+    self.imageViewEngName.alpha = 0.0;
     
     [self showNameAnimation];
 }
@@ -174,7 +176,24 @@
  */
 - (void)showNameAnimation
 {
-    
+    __weak MenuAnimationView *BlockSelf = self;
+    [UIView animateWithDuration:0.6 animations:^{
+        //
+        UIImage *imagePao = [UIImage imageNamed:@"menu_animationView_letter_pao.png"];
+        BlockSelf.imageViewChiNameBig.frame = CGRectMake(BlockSelf.imageViewChiNameBig.frame.origin.x, BlockSelf.center.y-49, BlockSelf.imageViewChiNameBig.frame.size.width, imagePao.size.height);
+        
+        UIImage *imageSmallName = [UIImage imageNamed:@"menu_animationView_letter_khjy.png"];
+        BlockSelf.imageViewChiNameSmall.frame = CGRectMake(BlockSelf.imageViewChiNameSmall.frame.origin.x, BlockSelf.center.y-9, BlockSelf.imageViewChiNameSmall.frame.size.width, imageSmallName.size.height);
+    } completion:^(BOOL finished) {
+        //
+        [UIView animateWithDuration:0.6 animations:^{
+            //
+            BlockSelf.imageViewEngName.alpha = 1.0;
+            BlockSelf.imageViewReflect.alpha = 1.0;
+        } completion:^(BOOL finished) {
+            //
+        }];
+    }];
 }
 
 /*!
