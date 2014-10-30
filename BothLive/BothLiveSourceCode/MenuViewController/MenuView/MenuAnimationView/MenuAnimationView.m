@@ -172,6 +172,7 @@
  */
 - (void)startAnimation
 {
+    [self stopAnimation];
     [self.imageViewBoy startAnimating];
     [self startCloudAnimation:YES];
     [self startLightAnimation:YES];

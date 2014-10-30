@@ -42,6 +42,16 @@
     
 }
 
+/*!
+ *  @Author pigpigdaddy, 14-10-30 15:10:24
+ *
+ *  @brief  重新开启主界面动画
+ */
+- (void)restartMenuViewAnimation
+{
+    [self.menuViewController.menuView.menuAnimationView startAnimation];
+}
+
 //- (void)showWelcomeView
 //{
 //    if (!self.welcomeView) {
