@@ -90,6 +90,8 @@
     self.imageViewEngName = [[UIImageView alloc] initWithImage:imageEngName];
     self.imageViewEngName.frame = CGRectMake(self.center.x+35, self.center.y-29, imageEngName.size.width, imageEngName.size.height);
     [self addSubview:self.imageViewEngName];
+    
+    [self showNameAnimation];
 }
 
 /*!
@@ -163,6 +165,16 @@
     UIImageView *imageViewGround = [[UIImageView alloc] initWithImage:imageGround];
     imageViewGround.frame = self.bounds;
     [self addSubview:imageViewGround];
+}
+
+/*!
+ *  @Author pigpigdaddy, 14-10-30 16:10:15
+ *
+ *  @brief  应用名称的第一次展示，使用动画
+ */
+- (void)showNameAnimation
+{
+    
 }
 
 /*!
