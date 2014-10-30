@@ -10,9 +10,12 @@
 #import "MenuViewController.h"
 #import "GameSceneViewController.h"
 
-@interface ViewController()<MenuViewControllerDelegate, UIAlertViewDelegate>
+@interface ViewController()<MenuViewControllerDelegate, GameSceneViewControllerDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, strong)MenuViewController *menuViewController;
+@property (nonatomic, strong)GameSceneViewController *gameSceneViewController;
+
+@property (nonatomic, strong)NSString *totleTime;
 
 @end
 
@@ -39,7 +42,9 @@
 
 - (void)initGameSceneViewController
 {
-    
+    self.gameSceneViewController = [[GameSceneViewController alloc] init];
+    self.gameSceneViewController.delegate = self;
+    [self.view insertSubview:self.gameSceneViewController.view belowSubview:self.menuViewController.view];
 }
 
 /*!
@@ -50,6 +55,42 @@
 - (void)restartMenuViewAnimation
 {
     [self.menuViewController.menuView.menuAnimationView startAnimation];
+}
+
+#pragma mark
+#pragma mark ============ MenuViewControllerDelegate ===========
+/*!
+ *  @Author pigpigdaddy, 14-10-30 22:10:00
+ *
+ *  @brief  开始游戏
+ *
+ *  @param type 游戏类型
+ */
+- (void)beginGameWithType:(MENU_LIST_BUTTON_NAME)type
+{
+    [UIView transitionFromView:self.menuViewController.view toView:self.gameSceneViewController.view duration:0.5 options:UIViewAnimationOptionTransitionFlipFromRight completion:^(BOOL finished) {
+        //
+        [self.menuViewController.menuView.menuAnimationView stopAnimation];
+    }];
+    [self.gameSceneViewController startGame];
+}
+
+#pragma mark
+#pragma mark ============ GameSceneViewControllerDelegate ===========
+/*!
+ *  @Author pigpigdaddy, 14-10-23 11:10:42
+ *
+ *  @brief  撞击了
+ *
+ *  @param position 撞击的跑酷小孩位置 从上到下index值 从1开始
+ *  @param time     总持续时间
+ */
+- (void)runningCrash:(int)position totalTime:(NSString *)time
+{
+    // 显示选择框 分享/取消
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"哇塞！简直不敢相信" message:[NSString stringWithFormat:@"你竟然坚持了 %@ 秒", time] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"分享到微信朋友圈", @"分享给微信好友", nil];
+    [alert show];
+    self.totleTime = time;
 }
 
 //- (void)showWelcomeView
@@ -183,33 +224,33 @@
 //    [self.skView removeFromSuperview];
 //}
 //
-//- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-//{
-//    switch (buttonIndex) {
-//        case 0:
-//        {
-//            
-//        }
-//            break;
-//        case 1:
-//        {
-//            if (self.delegate && [self.delegate respondsToSelector:@selector(sendToWXTimeLine:)]) {
-//                [self.delegate sendToWXTimeLine:[NSString stringWithFormat:@"《跑酷好基友》哇塞！你坚持了 %@ 秒！！", self.label.text]];
-//            }
-//        }
-//            break;
-//        case 2:
-//        {
-//            if (self.delegate && [self.delegate respondsToSelector:@selector(sendToWXFriend:)]) {
-//                [self.delegate sendToWXFriend:[NSString stringWithFormat:@"《跑酷好基友》哇塞！你坚持了 %@ 秒！！", self.label.text]];
-//            }
-//        }
-//            break;
-//            
-//        default:
-//            break;
-//    }
-//}
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    switch (buttonIndex) {
+        case 0:
+        {
+            
+        }
+            break;
+        case 1:
+        {
+            if (self.delegate && [self.delegate respondsToSelector:@selector(sendToWXTimeLine:)]) {
+                [self.delegate sendToWXTimeLine:[NSString stringWithFormat:@"《跑酷好基友》哇塞！你坚持了 %@ 秒！！", self.totleTime]];
+            }
+        }
+            break;
+        case 2:
+        {
+            if (self.delegate && [self.delegate respondsToSelector:@selector(sendToWXFriend:)]) {
+                [self.delegate sendToWXFriend:[NSString stringWithFormat:@"《跑酷好基友》哇塞！你坚持了 %@ 秒！！", self.totleTime]];
+            }
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
 
 
 

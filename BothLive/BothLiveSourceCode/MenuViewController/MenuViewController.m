@@ -57,7 +57,9 @@
  */
 - (void)beginGame:(MENU_LIST_BUTTON_NAME)gameType
 {
-    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(beginGameWithType:)]) {
+        [self.delegate beginGameWithType:gameType];
+    }
 }
 
 @end

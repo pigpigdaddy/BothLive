@@ -17,7 +17,14 @@
 
 @protocol MenuViewControllerDelegate <NSObject>
 
-//
+/*!
+ *  @Author pigpigdaddy, 14-10-30 22:10:00
+ *
+ *  @brief  开始游戏
+ *
+ *  @param type 游戏类型
+ */
+- (void)beginGameWithType:(MENU_LIST_BUTTON_NAME)type;
 
 @end
 

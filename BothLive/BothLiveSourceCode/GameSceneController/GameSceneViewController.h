@@ -13,6 +13,7 @@
  */
 
 #import <UIKit/UIKit.h>
+#import <SpriteKit/SpriteKit.h>
 
 @protocol GameSceneViewControllerDelegate <NSObject>
 
@@ -29,5 +30,10 @@
 @end
 
 @interface GameSceneViewController : UIViewController
+
+@property (nonatomic, assign)id<GameSceneViewControllerDelegate> delegate;
+
+
+- (void)startGame;
 
 @end

@@ -65,6 +65,7 @@
     if (self.delegate && [self.delegate respondsToSelector:@selector(menuListCellButtonDidTouched:)]) {
         [self.delegate menuListCellButtonDidTouched:self.index];
     }
+    NSLog(@"aaaa");
 }
 
 @end

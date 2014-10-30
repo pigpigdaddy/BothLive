@@ -35,6 +35,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         //
+        self.delegate = delegate;
         [self initData:data];
         [self initView];
     }
