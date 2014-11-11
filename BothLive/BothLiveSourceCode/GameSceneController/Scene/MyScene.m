@@ -15,6 +15,8 @@
         /* Setup your scene here */
         self.backgroundColor = [SKColor whiteColor];
         
+        [self initGround];
+        
         [self createBabyImageArray];
         [self createBaby];
 //
@@ -38,6 +40,19 @@
             [self upBabyJump];
         }
     }
+}
+
+- (void)initGround
+{
+    SKSpriteNode *upGround = [SKSpriteNode spriteNodeWithImageNamed:@"sceneView_ground.png"];
+    upGround.position = CGPointMake(self.size.width/2, self.size.height/2+13);
+    upGround.size = CGSizeMake(self.size.width, 5);
+    [self addChild:upGround];
+    
+    SKSpriteNode *downGround = [SKSpriteNode spriteNodeWithImageNamed:@"sceneView_ground.png"];
+    downGround.position = CGPointMake(self.size.width/2, 13);
+    downGround.size = CGSizeMake(self.size.width, 5);
+    [self addChild:downGround];
 }
 
 - (void)createBaby
@@ -275,8 +290,8 @@
     
     
     // 回调
-    if (self.delegate && [self.delegate respondsToSelector:@selector(crash)]) {
-        [self.delegate crash];
+    if (self.mySceneDelegate && [self.mySceneDelegate respondsToSelector:@selector(crash)]) {
+        [self.mySceneDelegate crash];
     }
 }
 

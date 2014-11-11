@@ -250,6 +250,11 @@
         default:
             break;
     }
+    [UIView transitionFromView:self.gameSceneViewController.view toView:self.menuViewController.view duration:0.5 options:UIViewAnimationOptionTransitionFlipFromRight completion:^(BOOL finished) {
+        //
+        [self.menuViewController.menuView.menuAnimationView startAnimation];
+    }];
+    [self.gameSceneViewController stopGame];
 }
 
 

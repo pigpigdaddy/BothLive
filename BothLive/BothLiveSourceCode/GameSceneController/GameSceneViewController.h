@@ -34,6 +34,9 @@
 @property (nonatomic, assign)id<GameSceneViewControllerDelegate> delegate;
 
 
+
 - (void)startGame;
+
+- (void)stopGame;
 
 @end

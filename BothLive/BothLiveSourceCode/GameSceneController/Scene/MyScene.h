@@ -32,7 +32,7 @@ static const uint32_t babyCategory        =  0x1 << 1;
 
 @interface MyScene : SKScene<SKPhysicsContactDelegate>
 
-@property (nonatomic, assign)id<MySceneDelegate> delegate;
+@property (nonatomic, assign)id<MySceneDelegate> mySceneDelegate;
 
 @property(nonatomic, strong) SKSpriteNode *upBaby;
 @property(nonatomic, strong) SKSpriteNode *downBaby;

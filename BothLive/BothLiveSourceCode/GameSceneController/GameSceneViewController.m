@@ -31,6 +31,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)stopGame
+{
+    [self.skView removeFromSuperview];
+}
+
 - (void)startGame
 {
     self.skView = [[SKView alloc] initWithFrame:self.view.bounds];
@@ -38,7 +43,7 @@
     
     self.scene = [MyScene sceneWithSize:self.skView.bounds.size];
     self.scene.scaleMode = SKSceneScaleModeAspectFill;
-    self.scene.delegate = self;
+    self.scene.mySceneDelegate = self;
     
     // Present the scene.
     [self.skView presentScene:self.scene];
